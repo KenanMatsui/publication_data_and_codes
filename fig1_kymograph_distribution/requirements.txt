@@ -1,0 +1,12 @@
+# Fig.1 解析パイプライン（01/02/03ノートブック）の依存パッケージ
+# インストール: pip install -r requirements.txt
+# 注意: 動画のフレーム抽出には ffmpeg（外部ツール）が別途必要。
+#       PATHに通っていること（ffmpeg -version で確認）。READMEのセットアップ手順を参照。
+
+numpy
+pandas
+matplotlib
+Pillow
+scipy
+ipython
+jupyter

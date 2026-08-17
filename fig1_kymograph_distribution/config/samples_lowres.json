@@ -1,0 +1,1320 @@
+{
+ "_description": "Fig.1系 低解像度(3チャンバー同時撮影)サンプル台帳。座標はすべて手動キャリブレーション値。",
+ "_coordinate_note": "calibration_line_px=[x1,y1,x2,y2]: 柱高さ5mm(またはHp)に合わせた較正線。extraction_line_px=[x1,y,x2,y]: L(x)抽出線（y=較正線上端-柱高さpx/2、旧コードの式を解決済みの値）。座標は90°回転(+fine_rotation)後の画像系。",
+ "defaults": {
+  "fps": 24,
+  "time_period_sec": 5,
+  "start_sec": 0,
+  "end_sec": 1800,
+  "base_rotation_deg": 90,
+  "pillar_height_mm_for_calibration": 5.0,
+  "chamber_width_mm": 80.0,
+  "luminance_threshold_downstream": 70
+ },
+ "samples": {
+  "250320_149A3445": {
+   "date": "250320",
+   "video_file": "149A3445.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      518,
+      448,
+      520,
+      508
+     ],
+     "extraction_line_px": [
+      17,
+      418,
+      1041,
+      418
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_top"
+    },
+    "middle": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      898,
+      1050,
+      898
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_middle"
+    },
+    "bottom": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1425,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1395,
+      1050,
+      1395
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__0_mm_20250320.ipynb",
+   "notes": [
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250320_149A3444": {
+   "date": "250320",
+   "video_file": "149A3444.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      518,
+      448,
+      520,
+      508
+     ],
+     "extraction_line_px": [
+      17,
+      418,
+      1041,
+      418
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_top"
+    },
+    "middle": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      898,
+      1050,
+      898
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1425,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1395,
+      1050,
+      1395
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__1_mm_20250320.ipynb",
+   "notes": [
+    "3チャンバーとも(1,5,1)か要確認（ノートブック内 Wp=1,1,1）",
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250320_149A3447": {
+   "date": "250320",
+   "video_file": "149A3447.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "Wp=5",
+     "calibration_line_px": [
+      518,
+      448,
+      520,
+      508
+     ],
+     "extraction_line_px": [
+      17,
+      418,
+      1041,
+      418
+     ],
+     "legacy_csv": "avg_lumi_Wp_20250320_top"
+    },
+    "middle": {
+     "condition": "Wp=2",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      898,
+      1050,
+      898
+     ],
+     "legacy_csv": "avg_lumi_Wp_20250320_middle"
+    },
+    "bottom": {
+     "condition": "Wp=0.5",
+     "calibration_line_px": [
+      520,
+      1425,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1395,
+      1050,
+      1395
+     ],
+     "legacy_csv": "avg_lumi_Wp_20250320_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__0_5__2__5_mm_20250320.ipynb",
+   "notes": [
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250320_149A3449": {
+   "date": "250320",
+   "video_file": "149A3449.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "Hp=1 (要確認)",
+     "calibration_line_px": [
+      518,
+      448,
+      520,
+      508
+     ],
+     "extraction_line_px": [
+      17,
+      418,
+      1041,
+      418
+     ],
+     "legacy_csv": null
+    },
+    "middle": {
+     "condition": "Hp=1 (要確認)",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      898,
+      1050,
+      898
+     ],
+     "legacy_csv": null
+    },
+    "bottom": {
+     "condition": "Hp=1 (要確認)",
+     "calibration_line_px": [
+      520,
+      1425,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1395,
+      1050,
+      1395
+     ],
+     "legacy_csv": null
+    }
+   },
+   "source_notebook": "kymograph_distribution_Hp__1_mm_20250320.ipynb",
+   "notes": [
+    "どのチャンバーがHp=1かの対応要確認",
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250320_149A3446": {
+   "date": "250320",
+   "video_file": "149A3446.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "Hp=7.5 (較正線長より推定)",
+     "calibration_line_px": [
+      518,
+      412,
+      520,
+      505
+     ],
+     "extraction_line_px": [
+      17,
+      400,
+      1041,
+      400
+     ],
+     "legacy_csv": null
+    },
+    "middle": {
+     "condition": "Hp=5 (推定)",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      897,
+      1050,
+      897
+     ],
+     "legacy_csv": null
+    },
+    "bottom": {
+     "condition": "Hp=2.5 (推定)",
+     "calibration_line_px": [
+      520,
+      1454,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1408,
+      1050,
+      1408
+     ],
+     "legacy_csv": null
+    }
+   },
+   "source_notebook": "kymograph_distribution_Hp__2_5__5__7_5_mm_20250320.ipynb",
+   "notes": [
+    "Integrationは avg_lumi_Hp_20250320_Hp2.5 / _Hp1 を読込。チャンバー対応の要確認",
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250320_149A3448": {
+   "date": "250320",
+   "video_file": "149A3448.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": true,
+   "chambers": {
+    "top": {
+     "condition": "Np=5",
+     "calibration_line_px": [
+      518,
+      448,
+      520,
+      508
+     ],
+     "extraction_line_px": [
+      17,
+      418,
+      1041,
+      418
+     ],
+     "legacy_csv": "avg_lumi_Np_20250320_top"
+    },
+    "middle": {
+     "condition": "Np=3",
+     "calibration_line_px": [
+      520,
+      928,
+      520,
+      990
+     ],
+     "extraction_line_px": [
+      26,
+      898,
+      1050,
+      898
+     ],
+     "legacy_csv": "avg_lumi_Np_20250320_middle"
+    },
+    "bottom": {
+     "condition": "Np=2",
+     "calibration_line_px": [
+      520,
+      1425,
+      520,
+      1485
+     ],
+     "extraction_line_px": [
+      20,
+      1395,
+      1050,
+      1395
+     ],
+     "legacy_csv": "avg_lumi_Np_20250320_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250320.ipynb",
+   "notes": [
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
+    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+   ]
+  },
+  "250617_149A3477": {
+   "date": "250617",
+   "video_file": "149A3477.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      518,
+      403,
+      520,
+      463
+     ],
+     "extraction_line_px": [
+      25,
+      373,
+      1049,
+      373
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_top"
+    },
+    "middle": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      886,
+      520,
+      946
+     ],
+     "extraction_line_px": [
+      17,
+      856,
+      1045,
+      856
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_middle"
+    },
+    "bottom": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1383,
+      520,
+      1441
+     ],
+     "extraction_line_px": [
+      15,
+      1353,
+      1045,
+      1353
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__0_mm_20250617.ipynb",
+   "notes": []
+  },
+  "250617_149A3478": {
+   "date": "250617",
+   "video_file": "149A3478.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      518,
+      400,
+      520,
+      463
+     ],
+     "extraction_line_px": [
+      26,
+      368,
+      1056,
+      368
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_top"
+    },
+    "middle": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      880,
+      520,
+      943
+     ],
+     "extraction_line_px": [
+      20,
+      848,
+      1050,
+      848
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1380,
+      520,
+      1443
+     ],
+     "extraction_line_px": [
+      20,
+      1348,
+      1050,
+      1348
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__1_mm_20250617.ipynb",
+   "notes": [
+    "ノートブック内 Wp_top/mid/bot=1/5/1 は条件トリプル(Wp,Hp,Np)の誤記入と推定"
+   ]
+  },
+  "250617_149A3479": {
+   "date": "250617",
+   "video_file": "149A3479.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "Wp=5",
+     "calibration_line_px": [
+      518,
+      400,
+      520,
+      463
+     ],
+     "extraction_line_px": [
+      25,
+      368,
+      1055,
+      368
+     ],
+     "legacy_csv": "avg_lumi_Wp_250617_top"
+    },
+    "middle": {
+     "condition": "Wp=2",
+     "calibration_line_px": [
+      520,
+      884,
+      520,
+      947
+     ],
+     "extraction_line_px": [
+      15,
+      852,
+      1042,
+      852
+     ],
+     "legacy_csv": "avg_lumi_Wp_250617_middle"
+    },
+    "bottom": {
+     "condition": "Wp=0.5",
+     "calibration_line_px": [
+      520,
+      1380,
+      520,
+      1443
+     ],
+     "extraction_line_px": [
+      20,
+      1348,
+      1050,
+      1348
+     ],
+     "legacy_csv": "avg_lumi_Wp_250617_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__0_5__2__5_mm_20250617.ipynb",
+   "notes": []
+  },
+  "250617_149A3480": {
+   "date": "250617",
+   "video_file": "149A3480.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "Hp=5 (較正線長より推定)",
+     "calibration_line_px": [
+      518,
+      398,
+      520,
+      458
+     ],
+     "extraction_line_px": [
+      17,
+      368,
+      1041,
+      368
+     ],
+     "legacy_csv": "avg_lumi_Hp_250617_top"
+    },
+    "middle": {
+     "condition": "Hp=2.5 (推定)",
+     "calibration_line_px": [
+      520,
+      897,
+      520,
+      927
+     ],
+     "extraction_line_px": [
+      13,
+      867,
+      1043,
+      867
+     ],
+     "legacy_csv": "avg_lumi_Hp_250617_middle"
+    },
+    "bottom": {
+     "condition": "Hp=1 (推定)",
+     "calibration_line_px": [
+      520,
+      1430,
+      520,
+      1440
+     ],
+     "extraction_line_px": [
+      15,
+      1400,
+      1045,
+      1400
+     ],
+     "legacy_csv": "avg_lumi_Hp_250617_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250617.ipynb",
+   "notes": [
+    "較正線長 60/30/10px からの推定"
+   ]
+  },
+  "250617_149A3481": {
+   "date": "250617",
+   "video_file": "149A3481.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "Np=5",
+     "calibration_line_px": [
+      520,
+      398,
+      520,
+      458
+     ],
+     "extraction_line_px": [
+      20,
+      368,
+      1046,
+      368
+     ],
+     "legacy_csv": "avg_lumi_Np_250617_top"
+    },
+    "middle": {
+     "condition": "Np=3",
+     "calibration_line_px": [
+      520,
+      888,
+      520,
+      950
+     ],
+     "extraction_line_px": [
+      13,
+      858,
+      1043,
+      858
+     ],
+     "legacy_csv": "avg_lumi_Np_250617_middle"
+    },
+    "bottom": {
+     "condition": "Np=2",
+     "calibration_line_px": [
+      520,
+      1385,
+      520,
+      1445
+     ],
+     "extraction_line_px": [
+      12,
+      1355,
+      1042,
+      1355
+     ],
+     "legacy_csv": "avg_lumi_Np_250617_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250617.ipynb",
+   "notes": []
+  },
+  "250619_149A3487": {
+   "date": "250619",
+   "video_file": "149A3487.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      518,
+      373,
+      520,
+      431
+     ],
+     "extraction_line_px": [
+      15,
+      344,
+      1034,
+      344
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_top"
+    },
+    "middle": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      856,
+      520,
+      916
+     ],
+     "extraction_line_px": [
+      7,
+      827,
+      1032,
+      827
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_middle"
+    },
+    "bottom": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1353,
+      520,
+      1411
+     ],
+     "extraction_line_px": [
+      5,
+      1324,
+      1028,
+      1324
+     ],
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Wp__0_mm_20250619.ipynb",
+   "notes": []
+  },
+  "250619_149A3490": {
+   "date": "250619",
+   "video_file": "149A3490.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "Hp=5 (較正線長より推定)",
+     "calibration_line_px": [
+      518,
+      358,
+      520,
+      418
+     ],
+     "extraction_line_px": [
+      47,
+      328,
+      1077,
+      328
+     ],
+     "legacy_csv": "avg_lumi_Hp_250619_top"
+    },
+    "middle": {
+     "condition": "Hp=2.5 (較正線長より推定)",
+     "calibration_line_px": [
+      520,
+      857,
+      520,
+      887
+     ],
+     "extraction_line_px": [
+      35,
+      827,
+      1065,
+      827
+     ],
+     "legacy_csv": "avg_lumi_Hp_250619_middle"
+    },
+    "bottom": {
+     "condition": "Hp=1 (較正線長より推定)",
+     "calibration_line_px": [
+      520,
+      1390,
+      520,
+      1400
+     ],
+     "extraction_line_px": [
+      27,
+      1360,
+      1057,
+      1360
+     ],
+     "legacy_csv": "avg_lumi_Hp_250619_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250619.ipynb",
+   "notes": [
+    "Hp系(1/2.5/5mm)。チャンバー対応は較正線長から推定"
+   ]
+  },
+  "250619_149A3491": {
+   "date": "250619",
+   "video_file": "149A3491.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "Np=5",
+     "calibration_line_px": [
+      520,
+      380,
+      520,
+      440
+     ],
+     "extraction_line_px": [
+      38,
+      350,
+      1068,
+      350
+     ],
+     "legacy_csv": "avg_lumi_Np_250619_top"
+    },
+    "middle": {
+     "condition": "Np=3",
+     "calibration_line_px": [
+      520,
+      868,
+      520,
+      928
+     ],
+     "extraction_line_px": [
+      38,
+      838,
+      1068,
+      838
+     ],
+     "legacy_csv": "avg_lumi_Np_250619_middle"
+    },
+    "bottom": {
+     "condition": "Np=2",
+     "calibration_line_px": [
+      520,
+      1363,
+      520,
+      1423
+     ],
+     "extraction_line_px": [
+      30,
+      1333,
+      1060,
+      1333
+     ],
+     "legacy_csv": "avg_lumi_Np_250619_bottom"
+    }
+   },
+   "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250619.ipynb",
+   "notes": []
+  },
+  "250807_149A3578": {
+   "date": "250807",
+   "video_file": "149A3578.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      547,
+      390,
+      605
+     ],
+     "extraction_line_px": [
+      45,
+      518,
+      1063,
+      518
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_top"
+    },
+    "middle": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      1047,
+      390,
+      1105
+     ],
+     "extraction_line_px": [
+      35,
+      1018,
+      1060,
+      1018
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      1532,
+      390,
+      1590
+     ],
+     "extraction_line_px": [
+      35,
+      1503,
+      1062,
+      1503
+     ],
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_bottom"
+    }
+   },
+   "source_notebook": "Video_to_frame_Pp__1devided_by_3__250807data_250819.ipynb",
+   "notes": []
+  },
+  "251117_149A3606": {
+   "date": "251117",
+   "video_file": "149A3606.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      518,
+      630,
+      520,
+      683
+     ],
+     "extraction_line_px": [
+      25,
+      604,
+      1060,
+      604
+     ],
+     "legacy_csv": "avg_lumi_num_149A3606_251117_top"
+    },
+    "middle": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1075,
+      520,
+      1128
+     ],
+     "extraction_line_px": [
+      18,
+      1048,
+      1047,
+      1048
+     ],
+     "legacy_csv": "avg_lumi_num_149A3606_251117_middle"
+    },
+    "bottom": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1610,
+      520,
+      1663
+     ],
+     "extraction_line_px": [
+      18,
+      1584,
+      1050,
+      1584
+     ],
+     "legacy_csv": "avg_lumi_num_149A3606_251117_bottom"
+    }
+   },
+   "source_notebook": "WpHpNp_000_251117_149A3606.ipynb",
+   "notes": []
+  },
+  "251117_149A3607": {
+   "date": "251117",
+   "video_file": "149A3607.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      518,
+      630,
+      520,
+      683
+     ],
+     "extraction_line_px": [
+      35,
+      604,
+      1070,
+      604
+     ],
+     "legacy_csv": "avg_lumi_num_149A3607_251117_top"
+    },
+    "middle": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1105,
+      520,
+      1158
+     ],
+     "extraction_line_px": [
+      33,
+      1078,
+      1062,
+      1078
+     ],
+     "legacy_csv": "avg_lumi_num_149A3607_251117_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1610,
+      520,
+      1663
+     ],
+     "extraction_line_px": [
+      33,
+      1584,
+      1065,
+      1584
+     ],
+     "legacy_csv": "avg_lumi_num_149A3607_251117_bottom"
+    }
+   },
+   "source_notebook": "WpHpNp_151_251117_149A3607.ipynb",
+   "notes": [
+    "ファイル名より(1,5,1)。ノートブック内Wp変数は0のまま（未更新と推定）"
+   ]
+  },
+  "251117_149A3608": {
+   "date": "251117",
+   "video_file": "149A3608.MP4",
+   "fine_rotation_deg": -1,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "calibration_line_px": [
+      260,
+      610,
+      260,
+      668
+     ],
+     "extraction_line_px": [
+      72,
+      581,
+      1100,
+      581
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_top"
+    },
+    "middle": {
+     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "calibration_line_px": [
+      255,
+      1100,
+      255,
+      1158
+     ],
+     "extraction_line_px": [
+      55,
+      1071,
+      1083,
+      1071
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "calibration_line_px": [
+      250,
+      1610,
+      250,
+      1664
+     ],
+     "extraction_line_px": [
+      46,
+      1581,
+      1082,
+      1581
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_bottom"
+    }
+   },
+   "source_notebook": "WpHpNpPp_151_0_25_251117_149A3608.ipynb",
+   "notes": [
+    "CSV保存名が149A3627を参照する既知の誤記あり（新命名で解消）"
+   ]
+  },
+  "251208_149A3642": {
+   "date": "251208",
+   "video_file": "149A3642.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      518,
+      360,
+      520,
+      420
+     ],
+     "extraction_line_px": [
+      45,
+      330,
+      1070,
+      330
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_top"
+    },
+    "middle": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      855,
+      520,
+      915
+     ],
+     "extraction_line_px": [
+      38,
+      825,
+      1055,
+      825
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_middle"
+    },
+    "bottom": {
+     "condition": "(0,0,0)",
+     "calibration_line_px": [
+      520,
+      1310,
+      520,
+      1370
+     ],
+     "extraction_line_px": [
+      42,
+      1280,
+      1062,
+      1280
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_bottom"
+    }
+   },
+   "source_notebook": "WpHpNp_000_251208_149A3642.ipynb",
+   "notes": []
+  },
+  "251208_149A3639": {
+   "date": "251208",
+   "video_file": "149A3639.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      383,
+      390,
+      441
+     ],
+     "extraction_line_px": [
+      42,
+      354,
+      1075,
+      354
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_top"
+    },
+    "middle": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      860,
+      390,
+      918
+     ],
+     "extraction_line_px": [
+      33,
+      831,
+      1063,
+      831
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      1360,
+      390,
+      1417
+     ],
+     "extraction_line_px": [
+      40,
+      1331,
+      1070,
+      1331
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_bottom"
+    }
+   },
+   "source_notebook": "WpHpNpPp_151_0_33_251208_149A3639.ipynb",
+   "notes": []
+  },
+  "251208_149A3653": {
+   "date": "251208",
+   "video_file": "149A3653.MP4",
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      333,
+      390,
+      391
+     ],
+     "extraction_line_px": [
+      27,
+      304,
+      1055,
+      304
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_top"
+    },
+    "middle": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      830,
+      390,
+      888
+     ],
+     "extraction_line_px": [
+      23,
+      801,
+      1048,
+      801
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_middle"
+    },
+    "bottom": {
+     "condition": "(1,5,1), Pp=1/3",
+     "calibration_line_px": [
+      390,
+      1320,
+      390,
+      1377
+     ],
+     "extraction_line_px": [
+      30,
+      1291,
+      1055,
+      1291
+     ],
+     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_bottom"
+    }
+   },
+   "source_notebook": "WpHpNpPp_151_0_33_251208_149A3653.ipynb",
+   "notes": []
+  },
+  "250325_TODO_Wp": {
+   "date": "250325",
+   "video_file": null,
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": null,
+   "chambers": null,
+   "source_notebook": null,
+   "notes": [
+    "TODO: Wp系(0.5/2/5) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+   ]
+  },
+  "250325_TODO_Hp": {
+   "date": "250325",
+   "video_file": null,
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": null,
+   "chambers": null,
+   "source_notebook": null,
+   "notes": [
+    "TODO: Hp系 の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+   ]
+  },
+  "250325_TODO_Np": {
+   "date": "250325",
+   "video_file": null,
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": null,
+   "chambers": null,
+   "source_notebook": null,
+   "notes": [
+    "TODO: Np系(2/3/5) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+   ]
+  },
+  "250325_TODO_000": {
+   "date": "250325",
+   "video_file": null,
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": null,
+   "chambers": null,
+   "source_notebook": null,
+   "notes": [
+    "TODO: (0,0,0) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+   ]
+  },
+  "250325_TODO_151": {
+   "date": "250325",
+   "video_file": null,
+   "fine_rotation_deg": 0,
+   "image_level_bg_removal": null,
+   "chambers": null,
+   "source_notebook": null,
+   "notes": [
+    "TODO: (1,5,1) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+   ]
+  }
+ }
+}

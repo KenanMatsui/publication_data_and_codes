@@ -1,0 +1,17 @@
+# ===== 一時ファイル（巨大・動画から再生成可能） =====
+fig*/data/frames_lowres/
+fig*/data/frames_highres/
+
+# ===== 生成物（当面は管理外。公開時にCSVを含めるか判断） =====
+fig*/data/luminance_1d/
+fig*/outputs/
+
+# ===== Jupyter / Python =====
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# ===== OSが勝手に作るファイル =====
+Thumbs.db
+Desktop.ini
+.DS_Store
