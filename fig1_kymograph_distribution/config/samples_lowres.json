@@ -32,7 +32,8 @@
       1041,
       418
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_20250320_top"
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -48,7 +49,8 @@
       1050,
       898
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_20250320_middle"
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -64,13 +66,14 @@
       1050,
       1395
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_20250320_bottom"
+     "legacy_csv": "avg_lumi_(0,0,0)_20250320_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_mm_20250320.ipynb",
    "notes": [
     "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
    ]
   },
   "250320_149A3444": {
@@ -93,7 +96,8 @@
       1041,
       418
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_20250320_top"
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1)",
@@ -109,7 +113,8 @@
       1050,
       898
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_20250320_middle"
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1)",
@@ -125,14 +130,15 @@
       1050,
       1395
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_20250320_bottom"
+     "legacy_csv": "avg_lumi_(1,5,1)_20250320_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__1_mm_20250320.ipynb",
    "notes": [
     "3チャンバーとも(1,5,1)か要確認（ノートブック内 Wp=1,1,1）",
     "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
    ]
   },
   "250320_149A3447": {
@@ -155,7 +161,8 @@
       1041,
       418
      ],
-     "legacy_csv": "avg_lumi_Wp_20250320_top"
+     "legacy_csv": "avg_lumi_Wp_20250320_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Wp=2",
@@ -171,7 +178,8 @@
       1050,
       898
      ],
-     "legacy_csv": "avg_lumi_Wp_20250320_middle"
+     "legacy_csv": "avg_lumi_Wp_20250320_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Wp=0.5",
@@ -187,13 +195,14 @@
       1050,
       1395
      ],
-     "legacy_csv": "avg_lumi_Wp_20250320_bottom"
+     "legacy_csv": "avg_lumi_Wp_20250320_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_5__2__5_mm_20250320.ipynb",
    "notes": [
     "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
    ]
   },
   "250320_149A3449": {
@@ -203,7 +212,7 @@
    "image_level_bg_removal": true,
    "chambers": {
     "top": {
-     "condition": "Hp=1 (要確認)",
+     "condition": "(チャンバー不存在)",
      "calibration_line_px": [
       518,
       448,
@@ -216,10 +225,11 @@
       1041,
       418
      ],
-     "legacy_csv": null
+     "legacy_csv": null,
+     "used_in_paper": false
     },
     "middle": {
-     "condition": "Hp=1 (要確認)",
+     "condition": "(チャンバー不存在)",
      "calibration_line_px": [
       520,
       928,
@@ -232,10 +242,11 @@
       1050,
       898
      ],
-     "legacy_csv": null
+     "legacy_csv": null,
+     "used_in_paper": false
     },
     "bottom": {
-     "condition": "Hp=1 (要確認)",
+     "condition": "Hp=1",
      "calibration_line_px": [
       520,
       1425,
@@ -248,14 +259,14 @@
       1050,
       1395
      ],
-     "legacy_csv": null
+     "legacy_csv": "avg_lumi_Hp_20250320_Hp1",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Hp__1_mm_20250320.ipynb",
    "notes": [
-    "どのチャンバーがHp=1かの対応要確認",
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "bottomのみ使用（Hp=1）。top/middleはチャンバー不存在（ユーザー確認済み 2026-08）",
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順"
    ]
   },
   "250320_149A3446": {
@@ -265,7 +276,7 @@
    "image_level_bg_removal": true,
    "chambers": {
     "top": {
-     "condition": "Hp=7.5 (較正線長より推定)",
+     "condition": "Hp=7.5",
      "calibration_line_px": [
       518,
       412,
@@ -278,10 +289,11 @@
       1041,
       400
      ],
-     "legacy_csv": null
+     "legacy_csv": "avg_lumi_Hp_20250320_Hp7.5",
+     "used_in_paper": false
     },
     "middle": {
-     "condition": "Hp=5 (推定)",
+     "condition": "Hp=5",
      "calibration_line_px": [
       520,
       928,
@@ -294,10 +306,11 @@
       1050,
       897
      ],
-     "legacy_csv": null
+     "legacy_csv": "avg_lumi_Hp_20250320_Hp5",
+     "used_in_paper": true
     },
     "bottom": {
-     "condition": "Hp=2.5 (推定)",
+     "condition": "Hp=2.5",
      "calibration_line_px": [
       520,
       1454,
@@ -310,14 +323,14 @@
       1050,
       1408
      ],
-     "legacy_csv": null
+     "legacy_csv": "avg_lumi_Hp_20250320_Hp2.5",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Hp__2_5__5__7_5_mm_20250320.ipynb",
    "notes": [
-    "Integrationは avg_lumi_Hp_20250320_Hp2.5 / _Hp1 を読込。チャンバー対応の要確認",
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "旧名・チャンバー対応はユーザー確認済み（2026-08）。top(Hp=7.5)は論文未使用",
+    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順"
    ]
   },
   "250320_149A3448": {
@@ -340,7 +353,8 @@
       1041,
       418
      ],
-     "legacy_csv": "avg_lumi_Np_20250320_top"
+     "legacy_csv": "avg_lumi_Np_20250320_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Np=3",
@@ -356,7 +370,8 @@
       1050,
       898
      ],
-     "legacy_csv": "avg_lumi_Np_20250320_middle"
+     "legacy_csv": "avg_lumi_Np_20250320_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Np=2",
@@ -372,13 +387,14 @@
       1050,
       1395
      ],
-     "legacy_csv": "avg_lumi_Np_20250320_bottom"
+     "legacy_csv": "avg_lumi_Np_20250320_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250320.ipynb",
    "notes": [
     "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名は保存セル付き版ノートブック未確認のため推定（要確認）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
    ]
   },
   "250617_149A3477": {
@@ -401,7 +417,8 @@
       1049,
       373
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_top"
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -417,7 +434,8 @@
       1045,
       856
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_middle"
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -433,7 +451,8 @@
       1045,
       1353
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_bottom"
+     "legacy_csv": "avg_lumi_(0,0,0)_250617_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_mm_20250617.ipynb",
@@ -459,7 +478,8 @@
       1056,
       368
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_top"
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1)",
@@ -475,7 +495,8 @@
       1050,
       848
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_middle"
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1)",
@@ -491,7 +512,8 @@
       1050,
       1348
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_bottom"
+     "legacy_csv": "avg_lumi_(1,5,1)_250617_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__1_mm_20250617.ipynb",
@@ -519,7 +541,8 @@
       1055,
       368
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_top"
+     "legacy_csv": "avg_lumi_Wp_250617_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Wp=2",
@@ -535,7 +558,8 @@
       1042,
       852
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_middle"
+     "legacy_csv": "avg_lumi_Wp_250617_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Wp=0.5",
@@ -551,7 +575,8 @@
       1050,
       1348
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_bottom"
+     "legacy_csv": "avg_lumi_Wp_250617_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_5__2__5_mm_20250617.ipynb",
@@ -577,7 +602,8 @@
       1041,
       368
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_top"
+     "legacy_csv": "avg_lumi_Hp_250617_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Hp=2.5 (推定)",
@@ -593,7 +619,8 @@
       1043,
       867
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_middle"
+     "legacy_csv": "avg_lumi_Hp_250617_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Hp=1 (推定)",
@@ -609,7 +636,8 @@
       1045,
       1400
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_bottom"
+     "legacy_csv": "avg_lumi_Hp_250617_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250617.ipynb",
@@ -637,7 +665,8 @@
       1046,
       368
      ],
-     "legacy_csv": "avg_lumi_Np_250617_top"
+     "legacy_csv": "avg_lumi_Np_250617_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Np=3",
@@ -653,7 +682,8 @@
       1043,
       858
      ],
-     "legacy_csv": "avg_lumi_Np_250617_middle"
+     "legacy_csv": "avg_lumi_Np_250617_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Np=2",
@@ -669,7 +699,8 @@
       1042,
       1355
      ],
-     "legacy_csv": "avg_lumi_Np_250617_bottom"
+     "legacy_csv": "avg_lumi_Np_250617_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250617.ipynb",
@@ -695,7 +726,8 @@
       1034,
       344
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_top"
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -711,7 +743,8 @@
       1032,
       827
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_middle"
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -727,7 +760,8 @@
       1028,
       1324
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_bottom"
+     "legacy_csv": "avg_lumi_(0,0,0)_250619_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_mm_20250619.ipynb",
@@ -753,7 +787,8 @@
       1077,
       328
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_top"
+     "legacy_csv": "avg_lumi_Hp_250619_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Hp=2.5 (較正線長より推定)",
@@ -769,7 +804,8 @@
       1065,
       827
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_middle"
+     "legacy_csv": "avg_lumi_Hp_250619_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Hp=1 (較正線長より推定)",
@@ -785,7 +821,8 @@
       1057,
       1360
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_bottom"
+     "legacy_csv": "avg_lumi_Hp_250619_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250619.ipynb",
@@ -813,7 +850,8 @@
       1068,
       350
      ],
-     "legacy_csv": "avg_lumi_Np_250619_top"
+     "legacy_csv": "avg_lumi_Np_250619_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "Np=3",
@@ -829,7 +867,8 @@
       1068,
       838
      ],
-     "legacy_csv": "avg_lumi_Np_250619_middle"
+     "legacy_csv": "avg_lumi_Np_250619_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "Np=2",
@@ -845,7 +884,8 @@
       1060,
       1333
      ],
-     "legacy_csv": "avg_lumi_Np_250619_bottom"
+     "legacy_csv": "avg_lumi_Np_250619_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250619.ipynb",
@@ -871,7 +911,8 @@
       1063,
       518
      ],
-     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_top"
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1), Pp=1/3",
@@ -887,7 +928,8 @@
       1060,
       1018
      ],
-     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_middle"
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1), Pp=1/3",
@@ -903,7 +945,8 @@
       1062,
       1503
      ],
-     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_bottom"
+     "legacy_csv": "avg_lumi_(1,5,1,0.33)_250807_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "Video_to_frame_Pp__1devided_by_3__250807data_250819.ipynb",
@@ -929,7 +972,8 @@
       1060,
       604
      ],
-     "legacy_csv": "avg_lumi_num_149A3606_251117_top"
+     "legacy_csv": "avg_lumi_num_149A3606_251117_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -945,7 +989,8 @@
       1047,
       1048
      ],
-     "legacy_csv": "avg_lumi_num_149A3606_251117_middle"
+     "legacy_csv": "avg_lumi_num_149A3606_251117_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -961,7 +1006,8 @@
       1050,
       1584
      ],
-     "legacy_csv": "avg_lumi_num_149A3606_251117_bottom"
+     "legacy_csv": "avg_lumi_num_149A3606_251117_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNp_000_251117_149A3606.ipynb",
@@ -987,7 +1033,8 @@
       1070,
       604
      ],
-     "legacy_csv": "avg_lumi_num_149A3607_251117_top"
+     "legacy_csv": "avg_lumi_num_149A3607_251117_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1)",
@@ -1003,7 +1050,8 @@
       1062,
       1078
      ],
-     "legacy_csv": "avg_lumi_num_149A3607_251117_middle"
+     "legacy_csv": "avg_lumi_num_149A3607_251117_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1)",
@@ -1019,7 +1067,8 @@
       1065,
       1584
      ],
-     "legacy_csv": "avg_lumi_num_149A3607_251117_bottom"
+     "legacy_csv": "avg_lumi_num_149A3607_251117_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNp_151_251117_149A3607.ipynb",
@@ -1034,7 +1083,7 @@
    "image_level_bg_removal": false,
    "chambers": {
     "top": {
-     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "condition": "(1,5,1), Pp=1/5? (要確認: ファイル名・dictキーは0.25表記、論文/見出しは1/5)",
      "calibration_line_px": [
       260,
       610,
@@ -1047,10 +1096,11 @@
       1100,
       581
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_top"
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_top",
+     "used_in_paper": true
     },
     "middle": {
-     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "condition": "(1,5,1), Pp=1/5? (要確認: ファイル名・dictキーは0.25表記、論文/見出しは1/5)",
      "calibration_line_px": [
       255,
       1100,
@@ -1063,10 +1113,11 @@
       1083,
       1071
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_middle"
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_middle",
+     "used_in_paper": true
     },
     "bottom": {
-     "condition": "(1,5,1), Pp=1/4 (要確認)",
+     "condition": "(1,5,1), Pp=1/5? (要確認: ファイル名・dictキーは0.25表記、論文/見出しは1/5)",
      "calibration_line_px": [
       250,
       1610,
@@ -1079,7 +1130,8 @@
       1082,
       1581
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_bottom"
+     "legacy_csv": "avg_lumi_num_dence=149A3627_data0_251117_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNpPp_151_0_25_251117_149A3608.ipynb",
@@ -1107,7 +1159,8 @@
       1070,
       330
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_top"
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -1123,7 +1176,8 @@
       1055,
       825
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_middle"
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -1139,7 +1193,8 @@
       1062,
       1280
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_bottom"
+     "legacy_csv": "avg_lumi_num_dence=149A3642_data0_251208_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNp_000_251208_149A3642.ipynb",
@@ -1165,7 +1220,8 @@
       1075,
       354
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_top"
+     "legacy_csv": "avg_lumi_num_dence=149A3639_251208_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1), Pp=1/3",
@@ -1181,7 +1237,8 @@
       1063,
       831
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_middle"
+     "legacy_csv": "avg_lumi_num_dence=149A3639_251208_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1), Pp=1/3",
@@ -1197,7 +1254,8 @@
       1070,
       1331
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3639_data0_251208_bottom"
+     "legacy_csv": "avg_lumi_num_dence=149A3639_251208_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNpPp_151_0_33_251208_149A3639.ipynb",
@@ -1223,7 +1281,8 @@
       1055,
       304
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_top"
+     "legacy_csv": "avg_lumi_num_dence=149A3653_251208_top",
+     "used_in_paper": true
     },
     "middle": {
      "condition": "(1,5,1), Pp=1/3",
@@ -1239,7 +1298,8 @@
       1048,
       801
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_middle"
+     "legacy_csv": "avg_lumi_num_dence=149A3653_251208_middle",
+     "used_in_paper": true
     },
     "bottom": {
      "condition": "(1,5,1), Pp=1/3",
@@ -1255,65 +1315,206 @@
       1055,
       1291
      ],
-     "legacy_csv": "avg_lumi_num_dence=149A3653_data0_251208_bottom"
+     "legacy_csv": "avg_lumi_num_dence=149A3653_251208_bottom",
+     "used_in_paper": true
     }
    },
    "source_notebook": "WpHpNpPp_151_0_33_251208_149A3653.ipynb",
    "notes": []
   },
-  "250325_TODO_Wp": {
-   "date": "250325",
-   "video_file": null,
+  "250807_149A3575": {
+   "date": "250807",
+   "video_file": "149A3575.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": null,
-   "chambers": null,
-   "source_notebook": null,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      518,
+      595,
+      520,
+      658
+     ],
+     "extraction_line_px": [
+      58,
+      564,
+      1085,
+      564
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data0_250807_top",
+     "used_in_paper": false
+    },
+    "middle": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      520,
+      1085,
+      520,
+      1148
+     ],
+     "extraction_line_px": [
+      40,
+      1054,
+      1070,
+      1054
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data0_250807_middle",
+     "used_in_paper": false
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1570,
+      520,
+      1633
+     ],
+     "extraction_line_px": [
+      48,
+      1538,
+      1075,
+      1538
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data0_250807_bottom",
+     "used_in_paper": true
+    }
+   },
+   "source_notebook": "Video_to_frame_num_dence__5_5__3_0__1_3__250807data_250819.ipynb",
    "notes": [
-    "TODO: Wp系(0.5/2/5) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+    "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
+    "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
+    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
    ]
   },
-  "250325_TODO_Hp": {
-   "date": "250325",
-   "video_file": null,
+  "250807_149A3576": {
+   "date": "250807",
+   "video_file": "149A3576.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": null,
-   "chambers": null,
-   "source_notebook": null,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      518,
+      610,
+      520,
+      673
+     ],
+     "extraction_line_px": [
+      48,
+      578,
+      1070,
+      578
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data1_250807_top",
+     "used_in_paper": false
+    },
+    "middle": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      520,
+      1095,
+      520,
+      1158
+     ],
+     "extraction_line_px": [
+      29,
+      1064,
+      1057,
+      1064
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data1_250807_middle",
+     "used_in_paper": false
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1585,
+      520,
+      1648
+     ],
+     "extraction_line_px": [
+      32,
+      1554,
+      1065,
+      1554
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data1_250807_bottom",
+     "used_in_paper": true
+    }
+   },
+   "source_notebook": "Video_to_frame_num_dence__5_5__3_0__1_3__250807data_250819.ipynb",
    "notes": [
-    "TODO: Hp系 の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+    "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
+    "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
+    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
    ]
   },
-  "250325_TODO_Np": {
-   "date": "250325",
-   "video_file": null,
+  "250807_149A3577": {
+   "date": "250807",
+   "video_file": "149A3577.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": null,
-   "chambers": null,
-   "source_notebook": null,
+   "image_level_bg_removal": false,
+   "chambers": {
+    "top": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      518,
+      595,
+      520,
+      658
+     ],
+     "extraction_line_px": [
+      51,
+      564,
+      1067,
+      564
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data2_250807_top",
+     "used_in_paper": false
+    },
+    "middle": {
+     "condition": "num_dence系(濃度可変・論文未使用)",
+     "calibration_line_px": [
+      520,
+      1080,
+      520,
+      1143
+     ],
+     "extraction_line_px": [
+      32,
+      1048,
+      1054,
+      1048
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data2_250807_middle",
+     "used_in_paper": false
+    },
+    "bottom": {
+     "condition": "(1,5,1)",
+     "calibration_line_px": [
+      520,
+      1570,
+      520,
+      1633
+     ],
+     "extraction_line_px": [
+      35,
+      1538,
+      1062,
+      1538
+     ],
+     "legacy_csv": "avg_lumi_num_dence=[5.5, 3.0, 1.3]_data2_250807_bottom",
+     "used_in_paper": true
+    }
+   },
+   "source_notebook": "Video_to_frame_num_dence__5_5__3_0__1_3__250807data_250819.ipynb",
    "notes": [
-    "TODO: Np系(2/3/5) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
-   ]
-  },
-  "250325_TODO_000": {
-   "date": "250325",
-   "video_file": null,
-   "fine_rotation_deg": 0,
-   "image_level_bg_removal": null,
-   "chambers": null,
-   "source_notebook": null,
-   "notes": [
-    "TODO: (0,0,0) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
-   ]
-  },
-  "250325_TODO_151": {
-   "date": "250325",
-   "video_file": null,
-   "fine_rotation_deg": 0,
-   "image_level_bg_removal": null,
-   "chambers": null,
-   "source_notebook": null,
-   "notes": [
-    "TODO: (1,5,1) の較正座標・動画名を元ノートブックから転記（Integrationが avg_lumi_*_20250325_* を読込済み）"
+    "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
+    "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
+    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
    ]
   }
  }
