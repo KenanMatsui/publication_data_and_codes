@@ -1,0 +1,205 @@
+{
+ "_description": "Fig.1C/F, Fig.4, Fig.S5系 高解像度(単一チャンバー)サンプル台帳(251208)",
+ "_coordinate_note": "座標は無回転のグレースケールフレーム上。y_interface=気液界面, y_floor=底面。抽出線y = y_floor - 0.75*(y_floor - y_interface)（下から3/4高さ）。x範囲=画像中心±15mm（px/mm=画像幅/40mm）。fine_rotation(0.7°)はスナップショット切出時のみ適用。input_videoの_fhd有無は要確認",
+ "defaults": {
+  "fps": 30,
+  "time_period_sec": 1,
+  "start_sec": 0,
+  "end_sec": 1800,
+  "image_width_mm": 40.0,
+  "analysis_halfwidth_mm": 15.0,
+  "height_ratio_from_floor": 0.75
+ },
+ "samples": {
+  "251208_149A3643": {
+   "date": "251208",
+   "video": "149A3643",
+   "input_video": "149A3643_fhd.mp4",
+   "condition": "(0,0,0)",
+   "panels": "Fig1C; FigS5(水深10mm)",
+   "used_in_paper": true,
+   "y_interface_px": 150,
+   "y_floor_px": 635,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3643_fhd_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3644": {
+   "date": "251208",
+   "video": "149A3644",
+   "input_video": "149A3644_fhd.mp4",
+   "condition": "(0,0,0)? (要確認)",
+   "panels": "用途不明(要確認)",
+   "used_in_paper": false,
+   "y_interface_px": 150,
+   "y_floor_px": 635,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3644_fhd_0sec_to_1800sec",
+   "notes": [
+    "論文使用有無を要確認"
+   ]
+  },
+  "251208_149A3645": {
+   "date": "251208",
+   "video": "149A3645",
+   "input_video": "149A3645_fhd.mp4",
+   "condition": "(1,5,1) Wp=1",
+   "panels": "Fig1F; Fig4B",
+   "used_in_paper": true,
+   "y_interface_px": 150,
+   "y_floor_px": 623,
+   "pillar_edges_px": [
+    4070,
+    4260
+   ],
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    1567,
+    1574,
+    1581
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3645_fhd_0sec_to_1800sec",
+   "notes": [
+    "スナップショット1567/1574/1581sはFig.2A用（ユーザー指定 2026-08）。旧1320-1355s切り出しは不使用"
+   ]
+  },
+  "251208_149A3646": {
+   "date": "251208",
+   "video": "149A3646",
+   "input_video": "149A3646_fhd.mp4",
+   "condition": "(要確認)",
+   "panels": "用途不明(要確認)",
+   "used_in_paper": false,
+   "y_interface_px": 150,
+   "y_floor_px": 623,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3646_fhd_0sec_to_1800sec",
+   "notes": [
+    "論文使用有無を要確認"
+   ]
+  },
+  "251208_149A3647": {
+   "date": "251208",
+   "video": "149A3647",
+   "input_video": "149A3647.mp4",
+   "condition": "(0,0,0) 水深7.5mm",
+   "panels": "FigS5",
+   "used_in_paper": true,
+   "y_interface_px": 250,
+   "y_floor_px": 650,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3647_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3648": {
+   "date": "251208",
+   "video": "149A3648",
+   "input_video": "149A3648.mp4",
+   "condition": "(0,0,0) 水深5mm",
+   "panels": "FigS5",
+   "used_in_paper": true,
+   "y_interface_px": 410,
+   "y_floor_px": 660,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3648_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3649": {
+   "date": "251208",
+   "video": "149A3649",
+   "input_video": "149A3649.mp4",
+   "condition": "(0,0,0) 水深2.5mm",
+   "panels": "FigS5",
+   "used_in_paper": true,
+   "y_interface_px": 500,
+   "y_floor_px": 650,
+   "pillar_edges_px": null,
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3649_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3650": {
+   "date": "251208",
+   "video": "149A3650",
+   "input_video": "149A3650.mp4",
+   "condition": "(1,5,1) Wp=5",
+   "panels": "Fig4D",
+   "used_in_paper": true,
+   "y_interface_px": 150,
+   "y_floor_px": 645,
+   "pillar_edges_px": [
+    850,
+    1100
+   ],
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3650_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3651": {
+   "date": "251208",
+   "video": "149A3651",
+   "input_video": "149A3651.mp4",
+   "condition": "(1,5,1) Wp=2",
+   "panels": "Fig4C",
+   "used_in_paper": true,
+   "y_interface_px": 170,
+   "y_floor_px": 640,
+   "pillar_edges_px": [
+    920,
+    1023
+   ],
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3651_0sec_to_1800sec",
+   "notes": []
+  },
+  "251208_149A3652": {
+   "date": "251208",
+   "video": "149A3652",
+   "input_video": "149A3652.mp4",
+   "condition": "(1,5,1) Wp=0.5",
+   "panels": "Fig4A",
+   "used_in_paper": true,
+   "y_interface_px": 170,
+   "y_floor_px": 650,
+   "pillar_edges_px": [
+    970,
+    1003
+   ],
+   "fine_rotation_deg": 0.7,
+   "snap_secs": [
+    900
+   ],
+   "legacy_csv": "avg_lumi_251208_149A3652_0sec_to_1800sec",
+   "notes": []
+  }
+ }
+}
