@@ -16,7 +16,7 @@
    "date": "250320",
    "video_file": "149A3445.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
     "top": {
      "condition": "(0,0,0)",
@@ -72,15 +72,15 @@
    },
    "source_notebook": "kymograph_distribution_Wp__0_mm_20250320.ipynb",
    "notes": [
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）",
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）"
    ]
   },
   "250320_149A3444": {
    "date": "250320",
    "video_file": "149A3444.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
     "top": {
      "condition": "(1,5,1)",
@@ -137,15 +137,15 @@
    "source_notebook": "kymograph_distribution_Wp__1_mm_20250320.ipynb",
    "notes": [
     "3チャンバーとも(1,5,1)か要確認（ノートブック内 Wp=1,1,1）",
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）",
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）"
    ]
   },
   "250320_149A3447": {
    "date": "250320",
    "video_file": "149A3447.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
     "top": {
      "condition": "Wp=5",
@@ -201,63 +201,29 @@
    },
    "source_notebook": "kymograph_distribution_Wp__0_5__2__5_mm_20250320.ipynb",
    "notes": [
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）",
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）"
    ]
   },
   "250320_149A3449": {
    "date": "250320",
    "video_file": "149A3449.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
-    "top": {
-     "condition": "(チャンバー不存在)",
-     "calibration_line_px": [
-      518,
-      448,
-      520,
-      508
-     ],
-     "extraction_line_px": [
-      17,
-      418,
-      1041,
-      418
-     ],
-     "legacy_csv": null,
-     "used_in_paper": false
-    },
-    "middle": {
-     "condition": "(チャンバー不存在)",
-     "calibration_line_px": [
-      520,
-      928,
-      520,
-      990
-     ],
-     "extraction_line_px": [
-      26,
-      898,
-      1050,
-      898
-     ],
-     "legacy_csv": null,
-     "used_in_paper": false
-    },
     "bottom": {
      "condition": "Hp=1",
      "calibration_line_px": [
-      520,
-      1425,
-      520,
-      1485
+      538,
+      516,
+      538,
+      529
      ],
      "extraction_line_px": [
       20,
-      1395,
+      431,
       1050,
-      1395
+      431
      ],
      "legacy_csv": "avg_lumi_Hp_20250320_Hp1",
      "used_in_paper": true
@@ -266,14 +232,16 @@
    "source_notebook": "kymograph_distribution_Hp__1_mm_20250320.ipynb",
    "notes": [
     "bottomのみ使用（Hp=1）。top/middleはチャンバー不存在（ユーザー確認済み 2026-08）",
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順"
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）",
+    "旧CSVとは座標不一致（保存版NBが別物）。新座標を正とする方針（案B）を採用、§3目視確認で妥当性担保",
+    "較正を全面修正（2026-08）: 唯一のチャンバーは回転後画像上部。較正線はHp=1mm柱基準（x=538, 柱本体上端y=516→床y=529=13px/mm。y510-515の明帯は奥行き2mm分の柱上面投影のため除外。水深10mm=128px→12.8px/mmとも2%以内で整合）。抽出線=床から98px=7.5mm。top/middleエントリはチャンバー不存在のため削除"
    ]
   },
   "250320_149A3446": {
    "date": "250320",
    "video_file": "149A3446.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
     "top": {
      "condition": "Hp=7.5",
@@ -285,15 +253,15 @@
      ],
      "extraction_line_px": [
       17,
-      400,
+      412,
       1041,
-      400
+      412
      ],
      "legacy_csv": "avg_lumi_Hp_20250320_Hp7.5",
      "used_in_paper": false
     },
     "middle": {
-     "condition": "Hp=5",
+     "condition": "Hp=5 (論文未使用: Integration読込対象外)",
      "calibration_line_px": [
       520,
       928,
@@ -307,7 +275,7 @@
       897
      ],
      "legacy_csv": "avg_lumi_Hp_20250320_Hp5",
-     "used_in_paper": true
+     "used_in_paper": false
     },
     "bottom": {
      "condition": "Hp=2.5",
@@ -319,9 +287,9 @@
      ],
      "extraction_line_px": [
       20,
-      1408,
+      1392,
       1050,
-      1408
+      1392
      ],
      "legacy_csv": "avg_lumi_Hp_20250320_Hp2.5",
      "used_in_paper": true
@@ -330,28 +298,30 @@
    "source_notebook": "kymograph_distribution_Hp__2_5__5__7_5_mm_20250320.ipynb",
    "notes": [
     "旧名・チャンバー対応はユーザー確認済み（2026-08）。top(Hp=7.5)は論文未使用",
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順"
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）",
+    "旧CSVとは座標不一致（保存版NBが別物）。新座標を正とする方針（案B）を採用、§3目視確認で妥当性担保",
+    "抽出高さを全チャンバー7.5mm(93px)に統一（2026-08 目視確認に基づく再調整。旧は top8.5/mid7.5/bottom6.2mm）"
    ]
   },
   "250320_149A3448": {
    "date": "250320",
    "video_file": "149A3448.MP4",
    "fine_rotation_deg": 0,
-   "image_level_bg_removal": true,
+   "image_level_bg_removal": false,
    "chambers": {
     "top": {
      "condition": "Np=5",
      "calibration_line_px": [
-      518,
-      448,
-      520,
-      508
+      532,
+      435,
+      532,
+      502
      ],
      "extraction_line_px": [
       17,
-      418,
+      402,
       1041,
-      418
+      402
      ],
      "legacy_csv": "avg_lumi_Np_20250320_top",
      "used_in_paper": true
@@ -359,16 +329,16 @@
     "middle": {
      "condition": "Np=3",
      "calibration_line_px": [
-      520,
-      928,
-      520,
-      990
+      541,
+      919,
+      541,
+      985
      ],
      "extraction_line_px": [
       26,
-      898,
+      886,
       1050,
-      898
+      886
      ],
      "legacy_csv": "avg_lumi_Np_20250320_middle",
      "used_in_paper": true
@@ -376,16 +346,16 @@
     "bottom": {
      "condition": "Np=2",
      "calibration_line_px": [
-      520,
-      1425,
-      520,
-      1485
+      358,
+      1413,
+      358,
+      1480
      ],
      "extraction_line_px": [
       20,
-      1395,
+      1380,
       1050,
-      1395
+      1380
      ],
      "legacy_csv": "avg_lumi_Np_20250320_bottom",
      "used_in_paper": true
@@ -393,8 +363,10 @@
    },
    "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250320.ipynb",
    "notes": [
-    "0320ロットは画像レベル背景除去（各画素の時系列最小値を減算）後に抽出する旧手順",
-    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）"
+    "旧CSV名はユーザーの実ファイル確認により確定（2026-08）",
+    "画像レベル背景除去は不使用と確定（検証 2026-08: 除去なしで3444/3445/3447が旧CSVと完全一致）",
+    "旧CSVとは座標不一致（保存版NBが別物）。新座標を正とする方針（案B）を採用、§3目視確認で妥当性担保",
+    "較正線・抽出線を再較正（2026-08: フレーム画像解析。旧線は6-13px下方＋bottomは柱の無いx位置だった。柱長66-67px=5mm基準で7.5mm高さに設定）"
    ]
   },
   "250617_149A3477": {
@@ -417,7 +389,7 @@
       1049,
       373
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_top",
+     "legacy_csv": "avg_lumi_(0,0,0)_20250617_top",
      "used_in_paper": true
     },
     "middle": {
@@ -434,7 +406,7 @@
       1045,
       856
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_middle",
+     "legacy_csv": "avg_lumi_(0,0,0)_20250617_middle",
      "used_in_paper": true
     },
     "bottom": {
@@ -451,7 +423,7 @@
       1045,
       1353
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250617_bottom",
+     "legacy_csv": "avg_lumi_(0,0,0)_20250617_bottom",
      "used_in_paper": true
     }
    },
@@ -478,7 +450,7 @@
       1056,
       368
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_top",
+     "legacy_csv": "avg_lumi_(1,5,1)_20250617_top",
      "used_in_paper": true
     },
     "middle": {
@@ -495,7 +467,7 @@
       1050,
       848
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_middle",
+     "legacy_csv": "avg_lumi_(1,5,1)_20250617_middle",
      "used_in_paper": true
     },
     "bottom": {
@@ -512,7 +484,7 @@
       1050,
       1348
      ],
-     "legacy_csv": "avg_lumi_(1,5,1)_250617_bottom",
+     "legacy_csv": "avg_lumi_(1,5,1)_20250617_bottom",
      "used_in_paper": true
     }
    },
@@ -541,7 +513,7 @@
       1055,
       368
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_top",
+     "legacy_csv": "avg_lumi_Wp_20250617_top",
      "used_in_paper": true
     },
     "middle": {
@@ -558,7 +530,7 @@
       1042,
       852
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_middle",
+     "legacy_csv": "avg_lumi_Wp_20250617_middle",
      "used_in_paper": true
     },
     "bottom": {
@@ -575,7 +547,7 @@
       1050,
       1348
      ],
-     "legacy_csv": "avg_lumi_Wp_250617_bottom",
+     "legacy_csv": "avg_lumi_Wp_20250617_bottom",
      "used_in_paper": true
     }
    },
@@ -589,7 +561,7 @@
    "image_level_bg_removal": false,
    "chambers": {
     "top": {
-     "condition": "Hp=5 (較正線長より推定)",
+     "condition": "Hp=5 (推定・論文未使用: Integration読込対象外)",
      "calibration_line_px": [
       518,
       398,
@@ -602,8 +574,8 @@
       1041,
       368
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_top",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Hp_20250617_top",
+     "used_in_paper": false
     },
     "middle": {
      "condition": "Hp=2.5 (推定)",
@@ -615,11 +587,11 @@
      ],
      "extraction_line_px": [
       13,
-      867,
+      837,
       1043,
-      867
+      837
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_middle",
+     "legacy_csv": "avg_lumi_Hp_20250617_middle",
      "used_in_paper": true
     },
     "bottom": {
@@ -632,17 +604,18 @@
      ],
      "extraction_line_px": [
       15,
-      1400,
+      1350,
       1045,
-      1400
+      1350
      ],
-     "legacy_csv": "avg_lumi_Hp_250617_bottom",
+     "legacy_csv": "avg_lumi_Hp_20250617_bottom",
      "used_in_paper": true
     }
    },
    "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250617.ipynb",
    "notes": [
-    "較正線長 60/30/10px からの推定"
+    "較正線長 60/30/10px からの推定",
+    "抽出高さを全チャンバー7.5mm(90px)に統一（2026-08 選択肢A採用。旧CSVは top7.5/mid5/bottom3.3mm相当で保存されており、以後の比較は不一致となるのが正）"
    ]
   },
   "250617_149A3481": {
@@ -665,7 +638,7 @@
       1046,
       368
      ],
-     "legacy_csv": "avg_lumi_Np_250617_top",
+     "legacy_csv": "avg_lumi_Np_20250617_top",
      "used_in_paper": true
     },
     "middle": {
@@ -682,7 +655,7 @@
       1043,
       858
      ],
-     "legacy_csv": "avg_lumi_Np_250617_middle",
+     "legacy_csv": "avg_lumi_Np_20250617_middle",
      "used_in_paper": true
     },
     "bottom": {
@@ -699,7 +672,7 @@
       1042,
       1355
      ],
-     "legacy_csv": "avg_lumi_Np_250617_bottom",
+     "legacy_csv": "avg_lumi_Np_20250617_bottom",
      "used_in_paper": true
     }
    },
@@ -726,8 +699,8 @@
       1034,
       344
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_top",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_(0,0,0)_20250619_top",
+     "used_in_paper": false
     },
     "middle": {
      "condition": "(0,0,0)",
@@ -743,8 +716,8 @@
       1032,
       827
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_middle",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_(0,0,0)_20250619_middle",
+     "used_in_paper": false
     },
     "bottom": {
      "condition": "(0,0,0)",
@@ -760,12 +733,14 @@
       1028,
       1324
      ],
-     "legacy_csv": "avg_lumi_(0,0,0)_250619_bottom",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_(0,0,0)_20250619_bottom",
+     "used_in_paper": false
     }
    },
    "source_notebook": "kymograph_distribution_Wp__0_mm_20250619.ipynb",
-   "notes": []
+   "notes": [
+    "0619ロットは懸濁液濃度が論文の対象範囲外のため論文未使用（ユーザー確認 2026-08）。データ・座標は記録として保持"
+   ]
   },
   "250619_149A3490": {
    "date": "250619",
@@ -787,8 +762,8 @@
       1077,
       328
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_top",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Hp_20250619_top",
+     "used_in_paper": false
     },
     "middle": {
      "condition": "Hp=2.5 (較正線長より推定)",
@@ -800,12 +775,12 @@
      ],
      "extraction_line_px": [
       35,
-      827,
+      797,
       1065,
-      827
+      797
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_middle",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Hp_20250619_middle",
+     "used_in_paper": false
     },
     "bottom": {
      "condition": "Hp=1 (較正線長より推定)",
@@ -817,17 +792,19 @@
      ],
      "extraction_line_px": [
       27,
-      1360,
+      1310,
       1057,
-      1360
+      1310
      ],
-     "legacy_csv": "avg_lumi_Hp_250619_bottom",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Hp_20250619_bottom",
+     "used_in_paper": false
     }
    },
    "source_notebook": "kymograph_distribution_Hp__1__2_5__5_mm_20250619.ipynb",
    "notes": [
-    "Hp系(1/2.5/5mm)。チャンバー対応は較正線長から推定"
+    "Hp系(1/2.5/5mm)。チャンバー対応は較正線長から推定",
+    "抽出高さを全チャンバー7.5mm(90px)に統一（2026-08 選択肢A採用。旧CSVは top7.5/mid5/bottom3.3mm相当で保存されており、以後の比較は不一致となるのが正）",
+    "0619ロットは懸濁液濃度が論文の対象範囲外のため論文未使用（ユーザー確認 2026-08）。データ・座標は記録として保持"
    ]
   },
   "250619_149A3491": {
@@ -850,8 +827,8 @@
       1068,
       350
      ],
-     "legacy_csv": "avg_lumi_Np_250619_top",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Np_20250619_top",
+     "used_in_paper": false
     },
     "middle": {
      "condition": "Np=3",
@@ -867,8 +844,8 @@
       1068,
       838
      ],
-     "legacy_csv": "avg_lumi_Np_250619_middle",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Np_20250619_middle",
+     "used_in_paper": false
     },
     "bottom": {
      "condition": "Np=2",
@@ -884,12 +861,14 @@
       1060,
       1333
      ],
-     "legacy_csv": "avg_lumi_Np_250619_bottom",
-     "used_in_paper": true
+     "legacy_csv": "avg_lumi_Np_20250619_bottom",
+     "used_in_paper": false
     }
    },
    "source_notebook": "kymograph_distribution_Np__2__3__5_mm_20250619.ipynb",
-   "notes": []
+   "notes": [
+    "0619ロットは懸濁液濃度が論文の対象範囲外のため論文未使用（ユーザー確認 2026-08）。データ・座標は記録として保持"
+   ]
   },
   "250807_149A3578": {
    "date": "250807",
@@ -1384,7 +1363,7 @@
    "notes": [
     "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
     "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
-    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
+    "検証 2026-08: 旧data0は3577の画像から誤抽出されていたことが確定（保存セルの画像使い回し）。新CSVが正"
    ]
   },
   "250807_149A3576": {
@@ -1449,7 +1428,7 @@
    "notes": [
     "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
     "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
-    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
+    "検証 2026-08: 旧data1は3577の画像から誤抽出されていたことが確定（保存セルの画像使い回し）。新CSVが正"
    ]
   },
   "250807_149A3577": {
@@ -1514,7 +1493,7 @@
    "notes": [
     "bottomチャンバーのみ(1,5,1)条件として論文使用（Fig.1G, Fig.S2。ユーザー確認 2026-08）",
     "top/middleは濃度系列（論文未使用）。各チャンバーの条件割当は要確認",
-    "旧ノートブックの保存セルは最終動画の画像を全line setに適用する不整合があった。旧CSVとの比較結果に特に注意（不一致ならその由来の可能性大）"
+    "検証 2026-08: 旧data2と完全一致（旧保存処理が正しく機能していた唯一の動画）"
    ]
   }
  }
