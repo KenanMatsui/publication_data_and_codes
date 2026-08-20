@@ -1,6 +1,6 @@
 {
  "_description": "Fig.1C/F, Fig.4, Fig.S5系 高解像度(単一チャンバー)サンプル台帳(251208)",
- "_coordinate_note": "座標は無回転のグレースケールフレーム上。y_interface=気液界面, y_floor=底面。抽出線y = y_floor - 0.75*(y_floor - y_interface)（下から3/4高さ）。x範囲=画像中心±15mm（px/mm=画像幅/40mm）。fine_rotation(0.7°)はスナップショット切出時のみ適用。input_videoの_fhd有無は要確認",
+ "_coordinate_note": "座標はFHD(1920x1080)の無回転グレースケールフレーム上。y_interface=気液界面, y_floor=底面。抽出線y = y_floor - r*(y_floor - y_interface)、rは既定0.75（下から3/4高さ）だが、サンプル個別のheight_ratio_from_floorで上書き可（水深5mm/2.5mmは界面との重なり回避のためr=0.5=中間点）。x範囲=画像中心±15mm（px/mm=画像幅/40mm=48）。fine_rotation(0.7°)はスナップショット切出時のみ適用。全動画は8K原本からarea縮小でFHD化済み（_fhd.mp4）。pillar_edges_pxはFHDフレーム上の実測値（明線ピーク重心、2026-08-20）",
  "defaults": {
   "fps": 30,
   "time_period_sec": 1,
@@ -57,8 +57,8 @@
    "y_interface_px": 150,
    "y_floor_px": 623,
    "pillar_edges_px": [
-    4070,
-    4260
+    951,
+    995
    ],
    "fine_rotation_deg": 0.7,
    "snap_secs": [
@@ -68,7 +68,8 @@
    ],
    "legacy_csv": "avg_lumi_251208_149A3645_fhd_0sec_to_1800sec",
    "notes": [
-    "スナップショット1567/1574/1581sはFig.2A用（ユーザー指定 2026-08）。旧1320-1355s切り出しは不使用"
+    "スナップショット1567/1574/1581sはFig.2A用（ユーザー指定 2026-08）。旧1320-1355s切り出しは不使用",
+    "pillar_edges_pxはFHDフレーム実測（2026-08-20）。幅44px=0.92mm（公称Wp=1、-7.9%）。旧8K換算値[1018,1065]は座標系不一致のため破棄"
    ]
   },
   "251208_149A3646": {
@@ -93,7 +94,7 @@
   "251208_149A3647": {
    "date": "251208",
    "video": "149A3647",
-   "input_video": "149A3647.mp4",
+   "input_video": "149A3647_fhd.mp4",
    "condition": "(0,0,0) 水深7.5mm",
    "panels": "FigS5",
    "used_in_paper": true,
@@ -110,7 +111,7 @@
   "251208_149A3648": {
    "date": "251208",
    "video": "149A3648",
-   "input_video": "149A3648.mp4",
+   "input_video": "149A3648_fhd.mp4",
    "condition": "(0,0,0) 水深5mm",
    "panels": "FigS5",
    "used_in_paper": true,
@@ -122,12 +123,15 @@
     900
    ],
    "legacy_csv": "avg_lumi_251208_149A3648_0sec_to_1800sec",
-   "notes": []
+   "notes": [
+    "水深5mmのため抽出線は特例で中間点（height_ratio_from_floor=0.5）。既定の3/4高さでは気液界面と重なる恐れがあるため（ユーザー確認 2026-08-20）"
+   ],
+   "height_ratio_from_floor": 0.5
   },
   "251208_149A3649": {
    "date": "251208",
    "video": "149A3649",
-   "input_video": "149A3649.mp4",
+   "input_video": "149A3649_fhd.mp4",
    "condition": "(0,0,0) 水深2.5mm",
    "panels": "FigS5",
    "used_in_paper": true,
@@ -139,52 +143,59 @@
     900
    ],
    "legacy_csv": "avg_lumi_251208_149A3649_0sec_to_1800sec",
-   "notes": []
+   "notes": [
+    "水深2.5mmのため抽出線は特例で中間点（height_ratio_from_floor=0.5）。既定の3/4高さでは気液界面と重なる恐れがあるため（ユーザー確認 2026-08-20）"
+   ],
+   "height_ratio_from_floor": 0.5
   },
   "251208_149A3650": {
    "date": "251208",
    "video": "149A3650",
-   "input_video": "149A3650.mp4",
+   "input_video": "149A3650_fhd.mp4",
    "condition": "(1,5,1) Wp=5",
    "panels": "Fig4D",
    "used_in_paper": true,
    "y_interface_px": 150,
    "y_floor_px": 645,
    "pillar_edges_px": [
-    850,
-    1100
+    844,
+    1093
    ],
    "fine_rotation_deg": 0.7,
    "snap_secs": [
     900
    ],
    "legacy_csv": "avg_lumi_251208_149A3650_0sec_to_1800sec",
-   "notes": []
+   "notes": [
+    "pillar_edges_pxはFHDフレーム実測（2026-08-20）。幅249px=5.19mm（公称Wp=5、+3.9%）。右エッジは柱内プルームの明帯と近接するため高さ不変な明線ピーク（x≈1093）で判別"
+   ]
   },
   "251208_149A3651": {
    "date": "251208",
    "video": "149A3651",
-   "input_video": "149A3651.mp4",
+   "input_video": "149A3651_fhd.mp4",
    "condition": "(1,5,1) Wp=2",
    "panels": "Fig4C",
    "used_in_paper": true,
    "y_interface_px": 170,
    "y_floor_px": 640,
    "pillar_edges_px": [
-    920,
-    1023
+    919,
+    1012
    ],
    "fine_rotation_deg": 0.7,
    "snap_secs": [
     900
    ],
    "legacy_csv": "avg_lumi_251208_149A3651_0sec_to_1800sec",
-   "notes": []
+   "notes": [
+    "pillar_edges_pxはFHDフレーム実測（2026-08-20）。幅94px=1.95mm（公称Wp=2、-2.3%）。旧値[920,1023]は右端が約11pxずれていた"
+   ]
   },
   "251208_149A3652": {
    "date": "251208",
    "video": "149A3652",
-   "input_video": "149A3652.mp4",
+   "input_video": "149A3652_fhd.mp4",
    "condition": "(1,5,1) Wp=0.5",
    "panels": "Fig4A",
    "used_in_paper": true,
