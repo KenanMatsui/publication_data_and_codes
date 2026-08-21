@@ -1,6 +1,6 @@
 {
  "_description": "Fig.2系（PIV・細胞フラックス解析）設定: 149A3645 (1,5,1) Wp=1",
- "_coordinate_note": "解析は8Kネイティブ(8192x4320)の無回転フレーム上で行う（レガシー同様、回転補正なし。底面傾き+0.83degは記録のみ）。較正は0secフレームの実測（柱高さHp=5mmをスケール基準、明線ピーク重心法・底面は柱左右6窓の直線フィットを柱中心xで内挿）。x=40mmアンカー=柱中心。旧Methodsの4.61um/pxは根拠不明のため破棄し、本較正値に置換（2026-08-21）",
+ "_coordinate_note": "解析は8Kネイティブ(8192x4320)フレームを回転補正(+0.710deg, 04ノートブック§2で自動収束)した回転後フレーム上で行う。較正の採用値は下記rotated_frame_adopted（0secフレーム、柱高さHp=5mmをスケール基準）。x=40mmアンカー=柱中心。旧Methodsの4.61um/pxは根拠不明のため破棄（レガシー実装は210px/mmで新較正208.8と0.6%差で整合）",
  "sample": {
   "date": "251208",
   "video": "149A3645",
@@ -11,22 +11,40 @@
  },
  "calibration": {
   "calib_frame_sec": 0,
-  "img_size_px": [8192, 4320],
-  "pillar_edges_px": [4058, 4247],
-  "pillar_center_px": 4152.5,
-  "pillar_top_y_px": 1472,
-  "y_floor_px": 2475,
-  "y_interface_px": 564,
-  "floor_tilt_deg": 0.83,
-  "px_per_mm": 200.65,
-  "um_per_px": 4.984,
-  "saturation_band_y_px": [2479, 2492],
+  "img_size_px": [
+   8192,
+   4320
+  ],
+  "rotation_deg_adopted": 0.71,
+  "rotation_note": "初期値0.83deg（無回転クロップ幅1400pxの局所勾配）から、±15mm全幅の底面残留傾きを繰り込む自動微調整で0.710degに収束（残留-0.013deg）。レガシーの0.7degと一致",
+  "rotated_frame_adopted": {
+   "px_per_mm": 208.8,
+   "um_per_px": 4.789,
+   "pillar_edges_px": [
+    4083.2,
+    4272.0
+   ],
+   "pillar_center_px": 4177.6,
+   "pillar_top_y_px": 1526.0,
+   "y_floor_px": 2570.0,
+   "y_interface_lowest_px": 619,
+   "floor_note": "底面は目視確定値（柱基部=柱面の終端）。自動検出の明帯重心は床面散乱で上方に偏るため手動補正（04のcalib_rotated.json manual_overridesに記録）",
+   "detection_method": "明線ピーク±12px重心（peak_centroid）。広窓重心は窓配置バイアスがあり不採用"
+  },
+  "unrotated_crop_provenance": {
+   "_note": "2026-08-21の一次実測（無回転フレーム、クロップbox=[3600,0,5000,4320]）。柱エッジ[4058,4247]・幅188.8px、上端1472、界面564。幅188.8pxは回転後検出と完全一致",
+   "pillar_edges_px": [
+    4058,
+    4247
+   ],
+   "pillar_width_px": 188.8
+  },
   "x_anchor_mm": 40.0,
   "checks": {
-   "pillar_width_mm": 0.941,
-   "water_depth_mm": 9.525,
-   "image_width_mm": 40.83,
-   "_note": "柱幅は公称Wp=1に対し-5.9%（FHD実測-7.9%と整合）。水深は公称10mmに対し実測9.53mm。旧メモの210px/mm・旧Methodsの4.61um/px(216.9px/mm)はいずれも破棄"
+   "pillar_width_mm": 0.904,
+   "water_depth_mm": 9.344,
+   "image_width_mm": 39.23,
+   "_note": "柱幅は公称Wp=1に対し-9.6%（FHD実測-7.9%と同傾向、加工公差＋エッジぼけ由来）。画像全幅の推定はfloor定義に±2%感度があり、Fig.1系の幅40mm公称仮定はこの不確かさの範囲内"
   }
  },
  "piv": {
@@ -42,19 +60,51 @@
   "_note": "24fps動画から1s間隔で連続2フレーム対を抽出。探索メモの'winsize52/searchsize56採用'は旧検討で不使用（本番=46/51/0、Methodsと一致）"
  },
  "analysis": {
-  "pickle_windows_sec": [[1201, 1300], [1301, 1400], [1401, 1500], [1501, 1600], [1601, 1700], [1701, 1800]],
-  "target_span_sec": [1200, 1730],
+  "pickle_windows_sec": [
+   [
+    1201,
+    1300
+   ],
+   [
+    1301,
+    1400
+   ],
+   [
+    1401,
+    1500
+   ],
+   [
+    1501,
+    1600
+   ],
+   [
+    1601,
+    1700
+   ],
+   [
+    1701,
+    1800
+   ]
+  ],
+  "target_span_sec": [
+   1200,
+   1730
+  ],
   "detection": {
    "height_rule": "y_detect = y_floor - 0.75*(y_floor - y_interface)（実測水深の下から3/4）",
-   "height_mm_from_floor": 7.14,
-   "regression_heights_mm_from_floor": [6.64, 7.14, 7.64],
+   "height_mm_from_floor": 7.01,
+   "regression_heights_mm_from_floor": [
+    6.51,
+    7.01,
+    7.51
+   ],
    "peak_fit": "ガウスフィット（sigma=0.5mm固定、オフセット付き）",
-   "_note": "旧値7.12mm・6.62/7.12/7.62mmは実測水深9.5mmの3/4規則に由来と判明（規則は継承、値は新較正で更新）。Fig2Aキャプションの'7.5mm'は公称水深前提の誤記として修正"
+   "_note": "旧値7.12mm・6.62/7.12/7.62mmは実測水深の3/4規則に由来と判明（規則は継承）。新較正（水深9.344mm）では7.01mm・6.51/7.01/7.51mm。Fig2Aキャプションの'7.5mm'は公称水深前提の誤記として修正"
   },
   "inflow_regions": {
    "side_offset_mm": 0.5,
    "region_width_mm": 0.6,
-   "bottom_rule": "検出高さ - 1.0mm（旧6.12mm=7.12-1.0に対応）",
+   "bottom_rule": "検出高さ - 1.0mm = 6.01mm（旧6.12=7.12-1.0に対応）",
    "top_rule": "解析領域上端（界面最下点）",
    "tilt_rule": "プルーム軸（3高さ線形回帰）に平行"
   },
@@ -69,12 +119,25 @@
   "qa": {
    "cross_correlation_expected": 0.41,
    "lag_expected_sec": 2.0,
-   "_note": "相互相関係数・ラグはスケール不変のため旧較正値がそのまま再現基準になる。速度・フラックス絶対値は新スケールで約+8%変化（論文数値を更新）"
+   "_note": "相互相関係数・ラグはスケール不変のため旧値0.41/2.0sが再現基準。速度・フラックス絶対値は新スケール4.789um/px（旧Methods4.61比+3.9%）で更新"
   }
  },
  "fig2a": {
-  "snap_secs": [1567, 1574, 1581],
-  "roi_mm_legacy": {"x": [34.5, 44.6], "y_from_floor": [0.46, 9.6]},
+  "snap_secs": [
+   1567,
+   1574,
+   1581
+  ],
+  "roi_mm_legacy": {
+   "x": [
+    34.5,
+    44.6
+   ],
+   "y_from_floor": [
+    0.46,
+    9.6
+   ]
+  },
   "_note": "三段図（原画像+フラックス場+流線）。ROIは新較正座標で notebook 05 にて再定義予定（レガシー値は参考）"
  }
 }

@@ -1,0 +1,22 @@
+{
+ "px_per_mm": 208.80491645749493,
+ "pillar_center": 4177.617995418299,
+ "pillar_edges": [
+  4083.2123797691725,
+  4272.023611067426
+ ],
+ "y_top": 1525.9754177125253,
+ "y_floor": 2570.0,
+ "y_if_lowest": 619.0,
+ "sat_top": 2526,
+ "xmin": 1045.5442485558751,
+ "xmax": 7309.691742280723,
+ "ymin": 619.0,
+ "ymax": 2524,
+ "rotate_deg": 0.71,
+ "residual_tilt_deg": -0.011692149519926089,
+ "manual_overrides": {
+  "y_floor": 2570.0
+ },
+ "detection_method": "peak_centroid(half=12)"
+}
