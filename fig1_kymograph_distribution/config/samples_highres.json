@@ -1,6 +1,6 @@
 {
  "_description": "Fig.1C/F, Fig.4, Fig.S5系 高解像度(単一チャンバー)サンプル台帳(251208)",
- "_coordinate_note": "座標はFHD(1920x1080)の無回転グレースケールフレーム上。y_interface=気液界面, y_floor=底面。抽出線y = y_floor - r*(y_floor - y_interface)、rは既定0.75（下から3/4高さ）だが、サンプル個別のheight_ratio_from_floorで上書き可（水深5mm/2.5mmは界面との重なり回避のためr=0.5=中間点）。x範囲=画像中心±15mm（px/mm=画像幅/40mm=48）。fine_rotation(0.7°)はスナップショット切出時のみ適用。全動画は8K原本からarea縮小でFHD化済み（_fhd.mp4）。pillar_edges_pxはFHDフレーム上の実測値（明線ピーク重心、2026-08-20）",
+ "_coordinate_note": "座標はFHD(1920x1080)の無回転グレースケールフレーム上。y_interface=気液界面, y_floor=底面。抽出線y = y_floor - r*(y_floor - y_interface)、rは既定0.75（下から3/4高さ）だが、サンプル個別のheight_ratio_from_floorで上書き可（水深5mm/2.5mmは界面との重なり回避のためr=0.5=中間点）。x範囲=画像中心±15mm（px/mm=画像幅/40mm=48）。fine_rotation(0.7°)はスナップショット切出時のみ適用。全動画は8K原本からarea縮小でFHD化済み（_fhd.mp4）。pillar_edges_pxはFHDフレーム上の実測値（明線ピーク重心、2026-08-20）。【輝度抽出のx窓とmm座標の対応（2026-08-21是正）】柱ありサンプル: 柱中心（pillar_edges_pxの中点をround）をx=40mmアンカーとし柱中心±15mmを抽出（カメラ視野中心は柱中心から+5.5〜+13.5pxずれており、画像中心基準では図上でデータと柱線が+0.11〜0.28mm右に平行移動して見えるため）。柱なしサンプル: 画像中心±15mm（画像中心=チャンバー中心40mm仮定）",
  "defaults": {
   "fps": 30,
   "time_period_sec": 1,
