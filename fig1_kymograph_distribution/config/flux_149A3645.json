@@ -1,0 +1,80 @@
+{
+ "_description": "Fig.2系（PIV・細胞フラックス解析）設定: 149A3645 (1,5,1) Wp=1",
+ "_coordinate_note": "解析は8Kネイティブ(8192x4320)の無回転フレーム上で行う（レガシー同様、回転補正なし。底面傾き+0.83degは記録のみ）。較正は0secフレームの実測（柱高さHp=5mmをスケール基準、明線ピーク重心法・底面は柱左右6窓の直線フィットを柱中心xで内挿）。x=40mmアンカー=柱中心。旧Methodsの4.61um/pxは根拠不明のため破棄し、本較正値に置換（2026-08-21）",
+ "sample": {
+  "date": "251208",
+  "video": "149A3645",
+  "input_video": "149A3645.MP4",
+  "condition": "(1,5,1) Wp=1",
+  "panels": "Fig2A; Fig2C; Fig2D",
+  "fps": 24
+ },
+ "calibration": {
+  "calib_frame_sec": 0,
+  "img_size_px": [8192, 4320],
+  "pillar_edges_px": [4058, 4247],
+  "pillar_center_px": 4152.5,
+  "pillar_top_y_px": 1472,
+  "y_floor_px": 2475,
+  "y_interface_px": 564,
+  "floor_tilt_deg": 0.83,
+  "px_per_mm": 200.65,
+  "um_per_px": 4.984,
+  "saturation_band_y_px": [2479, 2492],
+  "x_anchor_mm": 40.0,
+  "checks": {
+   "pillar_width_mm": 0.941,
+   "water_depth_mm": 9.525,
+   "image_width_mm": 40.83,
+   "_note": "柱幅は公称Wp=1に対し-5.9%（FHD実測-7.9%と整合）。水深は公称10mmに対し実測9.53mm。旧メモの210px/mm・旧Methodsの4.61um/px(216.9px/mm)はいずれも破棄"
+  }
+ },
+ "piv": {
+  "winsize_px": 46,
+  "searchsize_px": 51,
+  "overlap_px": 0,
+  "pair_dt_sec": 0.041666666666666664,
+  "pair_interval_sec": 1,
+  "sig2noise_min": 1.05,
+  "velocity_max_mm_s": 3.0,
+  "zscore_max": 3.0,
+  "interp_kernel": "7x7局所平均、1回のみ",
+  "_note": "24fps動画から1s間隔で連続2フレーム対を抽出。探索メモの'winsize52/searchsize56採用'は旧検討で不使用（本番=46/51/0、Methodsと一致）"
+ },
+ "analysis": {
+  "pickle_windows_sec": [[1201, 1300], [1301, 1400], [1401, 1500], [1501, 1600], [1601, 1700], [1701, 1800]],
+  "target_span_sec": [1200, 1730],
+  "detection": {
+   "height_rule": "y_detect = y_floor - 0.75*(y_floor - y_interface)（実測水深の下から3/4）",
+   "height_mm_from_floor": 7.14,
+   "regression_heights_mm_from_floor": [6.64, 7.14, 7.64],
+   "peak_fit": "ガウスフィット（sigma=0.5mm固定、オフセット付き）",
+   "_note": "旧値7.12mm・6.62/7.12/7.62mmは実測水深9.5mmの3/4規則に由来と判明（規則は継承、値は新較正で更新）。Fig2Aキャプションの'7.5mm'は公称水深前提の誤記として修正"
+  },
+  "inflow_regions": {
+   "side_offset_mm": 0.5,
+   "region_width_mm": 0.6,
+   "bottom_rule": "検出高さ - 1.0mm（旧6.12mm=7.12-1.0に対応）",
+   "top_rule": "解析領域上端（界面最下点）",
+   "tilt_rule": "プルーム軸（3高さ線形回帰）に平行"
+  },
+  "filters": {
+   "hampel_window_pts": 5,
+   "hampel_nsigma": 3.0,
+   "hampel_scale": 1.4826,
+   "savgol_window_pts": 21,
+   "savgol_polyorder": 3,
+   "savgol_apply_to": "プルーム位置時系列のみ（フラックス差には適用しない）"
+  },
+  "qa": {
+   "cross_correlation_expected": 0.41,
+   "lag_expected_sec": 2.0,
+   "_note": "相互相関係数・ラグはスケール不変のため旧較正値がそのまま再現基準になる。速度・フラックス絶対値は新スケールで約+8%変化（論文数値を更新）"
+  }
+ },
+ "fig2a": {
+  "snap_secs": [1567, 1574, 1581],
+  "roi_mm_legacy": {"x": [34.5, 44.6], "y_from_floor": [0.46, 9.6]},
+  "_note": "三段図（原画像+フラックス場+流線）。ROIは新較正座標で notebook 05 にて再定義予定（レガシー値は参考）"
+ }
+}
